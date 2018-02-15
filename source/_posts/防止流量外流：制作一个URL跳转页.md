@@ -4,33 +4,39 @@ permalink: create-a-url-page
 id: 7
 updated: '2017-08-23 11:44:27'
 date: 2017-01-21 10:26:10
-tags:
+tags: ["跳转页", "技术分享"]
+toc: true
+cover: https://img.a632079.me/uploads/2017/08/1928477,106.jpg
 ---
 
-   搜索引擎上是根据什么来确定网站的先后顺序的呢？排除掉关键字的因素，剩余的因素就是网站本身的权重了。
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="https://cdn.a632079.me/163cplayer.html?playlist=41665508"></iframe>   
-###那权重是什么？
+搜索引擎上是根据什么来确定网站的先后顺序的呢？排除掉关键字的因素，剩余的因素就是网站本身的权重了。
+### 那权重是什么？
    网站权重是指搜索引擎给网站（包括网页）赋予一定的权威值，对网站（含网页）权威的评估评价。一个网站权重越高，在搜索引擎所占的份量越大，在搜索引擎排名就越好。提高网站权重，不但利于网站（包括网页）在搜索引擎的排名更靠前，还能提高整站的流量，提高网站信任度。所以提高网站的权重具有相当重要的意义。 权重即网站在SEO中的重要性，权威性。英文：Page Strength。CuteSEO资讯列表1、权重不等于排名 2、权重对排名有着非常大的影响 3、整站权重的提高有利于内页的排名。
->该词条来自《百度百科》  
+> 该词条来自《百度百科》  
 
    首先，权重是一个综合的因素。服务器环境，文章内容质量，域名这些因素都是既定的，我们现在也没办法改变这些，但我们可以通过**制作一个URL跳转页**来避免你的流量流失，影响权重。
 
-###在开始之前
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="https://cdn.a632079.me/163music.html?playlist=41665508"></iframe>
+
+### 在开始之前
    很多站点都有类似评论的功能，在评论框中留言者可以任意填写网址。但是很多时候我们不希望自己的网站存在过多杂乱的外部链接。当然，我们可以为链接加上nofollow属性。即本来链接代码是： 
  
 ```HTML
 <a href="https://i.a632079.me">藤球的窝</a>
-```  
+```
+
 当我们给这个链接加上rel="nofollow"属性时，即告诉搜索引擎此链接地址不要传权重过去。形如： 
+
 ```HTML
 <a href="https://i.a632079.me" rel="nofollow">藤球的窝</a>
 ```  
 
-###配置页面
+### 配置页面
 但是，我们今天讲得并不是这种方法。我们的目标是将baidu.com重定向到yourdomain.com/?jump=http://baidu.com。  
 本身我是想集成腾讯的网址安全检查的，但是高中太忙了，根本没时间做完啊：（  
 亲们只需要把下面的代码保存为**url.html**放到自己站点的根目录。（什么，丑？不满意自己写啊，Doge呵斥）
-```
+
+```HTML
 <!doctype html>
 <html class="no-js">
 <head>
@@ -135,22 +141,24 @@ $("#ulink").text(url);
 </script>
 </body>
 </html>
-```  
-###重定向
+```
+
+### 重定向
 在你完成上传之后，由于不知道你的网站是什么系统，你可以修改自己的网站模板（今天不讲这个），也可以通过JavaScript来重定向你的网站。
 在你页面的末尾加一个`<script></script>`标签，将下面的代码放到中间即可。
 **以下代码必须引用JQuery才能正常执行**  
-```
-//如果网站页面超过1000行，还是想办法改模板吧。。
+
+```javascript
 $("a").each(function(){
-if($(this).attr("href").search("//yourdomain.com") == -1){
-var jump = "//yourdomain.com/url.html?jump=" + $(this).attr("href");
-$(this).attr("href",jump);
-}
+  if($(this).attr("href").search("//yourdomain.com") == -1){
+    var jump = "//yourdomain.com/url.html?jump=" + $(this).attr("href");
+    $(this).attr("href",jump);
+  }
 });
+// 如果网站页面超过1000行，还是想办法改模板吧。
 ```  
 
->参考文章：[《给网站外链进行重定向跳转 - 小祥子》](http://m.xiaoxiangzi.com/9/11663.html)  
->[《网站权重 - 百度百科》](https://wapbaike.baidu.com/item/网站权重?adapt=1)  
+> 参考文章：[《给网站外链进行重定向跳转 - 小祥子》](http://m.xiaoxiangzi.com/9/11663.html)  
+> [《网站权重 - 百度百科》](https://wapbaike.baidu.com/item/网站权重?adapt=1)  
 
 

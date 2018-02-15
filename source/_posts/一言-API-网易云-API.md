@@ -1,15 +1,12 @@
 ---
 title: 一言 API & 网易云 API
-tags: |-
-
-  - apis
-  - api
-  - hitokoto
-  - netease
-permalink: api
+tags: [ "apis", "api", "hitokoto", "netease"]
+permalink: teng-koa
 id: 14
 updated: '2018-01-31 00:59:49'
 date: 2018-02-10 16:11:47
+cover: https://piccdn.freejishu.com/images/2016/07/18/59fe422cee6a2b825e4521ace38cc8b0.jpg!/format/jpg
+toc: true
 ---
 
 ### 何为 一言？
@@ -25,9 +22,7 @@ Emmmm, 我想这个没啥好说的。
 > 项目基于 Teng-koa (https://github.com/a632079/teng-koa) 还望使用之余给个 Star~
 
 #### 状态统计
-```
-https://api.a632079.me/status  
-```
+访问： https://api.a632079.me/status  
 #### 一言
 > 一言数据基于 `Hitokoto.cn`, 已经过授权。由于 API 本身是基于 v1 的再设计，所以预计在下月初就能将原有框架更新完毕。 
 
@@ -35,9 +30,8 @@ https://api.a632079.me/status
 支持的参数: `http://hitokoto.cn/api`    
 与目前的接口不同，我们目前还支持提供 `JSONP` 返回。  
 以下是一个调用例子：  
-```
 https://api.a632079.me?callback=poi&encode=text
-```
+
 
 #### 网易云
 接口: `https://api.a632079.me/nm`  

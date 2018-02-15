@@ -1,17 +1,12 @@
 ---
 title: 浅谈藤式PHP构架
-tags: |-
-
-  - 浅谈
-  - 技术
-  - 2017
-  - 教程
-  - 动态
-  - 学习
+tags: ["浅谈", "技术", "2017","教程", "动态", "学习"]
 permalink: teng-php
 id: 9
 updated: '2017-08-23 11:29:02'
 date: 2017-01-24 23:02:48
+toc: true
+cover: https://piccdn.freejishu.com/images/2016/10/03/a76f44e1a7b904cae790d93eab3529ca.jpg
 ---
 
 写一个PHP程序，最重要的是**入口简洁，唯一**。**构架清晰，模块化，易维护**。  
@@ -20,7 +15,8 @@ date: 2017-01-24 23:02:48
 * 另一个原因是：我自己也是新手，渴望获得大佬们的指教**~~（说白就是求大佬怒喷）~~**   
 废话不多说，我要开始自卖自夸我的设计了。
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="https://cdn.a632079.me/163cplayer.html?playlist=28524464&autoplay=true"></iframe>  
-###目录
+
+### 目录
 ```
 ./
 |--index.php 入口文件
@@ -34,7 +30,8 @@ date: 2017-01-24 23:02:48
 目录 <font color ="red">**protect**</font> 是我用来放置配置，系统功能的目录。通常我都是使用Nginx来对这个目录限制访问权限（`return 403`）。  
 目录 <font color ="blue">**resource**</font> 是我用来放置可访问资源的。例如：页面需要使用到的`font`,`css`,`JavaScript`等等。  
 总体上来看，我这样设计的目的就是区分功能，入口唯一，便于维护。
-###代码
+
+###  代码
 ```PHP
 <?php
 //Set Path
@@ -61,11 +58,13 @@ $end = array(
     );
 die(json_encode($end));
 ```
+
 这是我书写一个API入口时所用的代码，因为api服务必须具有多种不同的功能，所以目录上就没有采用一般目录设计了，在这里就直接使用api的代称直接建档了。   
 <font color="green">在这个入口里，我的代码主要是为了初始化核心类。然后，我直接将GET和POST这两种方式所能获得的信息，直接提交给了核心类的处理函数。处理函数便会帮助我分发给所需要的处理函数</font>
 
 ><font color="orange">下面是我帮别人写的初始化代码，仅供参考</font>
-#####config.php
+
+##### config.php
 ```PHP
 <?php
 define("app_name","");
@@ -89,7 +88,8 @@ $config = (object)array(
     );
  
 ```
-#####main.class.php
+##### main.class.php
+
 ```PHP
 <?php
     class core{
@@ -119,4 +119,4 @@ $config = (object)array(
 
     }
 ```  
->####**<font color="purple">代码真心直供参考...毕竟我只是新手啊！</font>**
+> #### **<font color="purple">代码真心直供参考...毕竟我只是新手啊！</font>**
