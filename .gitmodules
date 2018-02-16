@@ -1,3 +1,9 @@
 [submodule "themes/aero-dual"]
 	path = themes/aero-dual
 	url = https://github.com/a632079/hexo-theme-aero-dual.git
+[submodule "themes/claudia"]
+	path = themes/claudia
+	url = https://github.com/a632079/hexo-theme-Claudia.git
+[submodule "themes/next"]
+	path = themes/next
+	url = https://github.com/a632079/hexo-theme-next.git
