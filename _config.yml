@@ -105,7 +105,7 @@ all_minifier: true
 html_minifier:
   enable: true
   ignore_error: false
-  silent: false
+  silent: true
   exclude:
 
 # JavaScript Concator & Minify
@@ -118,7 +118,7 @@ js_concator:
 js_minifier:
   enable: true
   mangle: true
-  silent: false
+  silent: true
 #  output:
 #  compress:
   exclude: 
@@ -127,7 +127,7 @@ js_minifier:
 # CSS Minify
 css_minifier:
   enable: true
-  silent: false
+  silent: true
   exclude: 
     - '*.min.css'
 
