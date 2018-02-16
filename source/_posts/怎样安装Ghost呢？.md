@@ -9,13 +9,14 @@ toc: true
 cover: https://img.a632079.me/uploads/2017/08/427988,106.jpg
 ---
 
-> ## Before All :
+> **Before All :**
 > 目前 Ghost 已发布 v1.x , 以下内容仅针对 v0.x 。
 > 如果您更喜欢 v0.x (LTS) 的风格，可以根据下面的内容进行尝试 :D
 
 -------------
 
 > 最近在学习Guillermo Rauch的《了不起的Node.js:将JavaScript进行到底》这一本书，便萌生了更换博客系统为Ghost的想法，于是一番折腾，终于搞定了。
+
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="https://cdn.a632079.me/163cplayer.html?playlist=410801521"></iframe>
 
 ### 1.准备
@@ -24,21 +25,24 @@ cover: https://img.a632079.me/uploads/2017/08/427988,106.jpg
 #### 1.1 安装nodejs环境
 Ghost 推荐使用nodejs LTS V6  
  我们就以Node.js V6来驱动Ghost吧。首先，使用SSH链接到你的VPS，选取合适的位置执行以下命令： 
-```
+
+```shell
 wget https://npm.taobao.org/mirrors/node/v6.9.4/node-v6.9.4.tar.gz #获得nodejs源代码  
 tar -xzf node-v6.9.4.tar.gz #解压源代码  
 cd node-v6.9.4   
 ./configure #配置 
 make #编译  
 make install #安装
-```  
+```
+
 经过漫长的等待，Node.js 就算是安装成功了。但NPM源由于在国外，在国内链接十分不稳定。我们再执行一下`npm config set registry http://registry.npm.taobao.org/`来把NPM源替换为淘宝源。
 
 #### 1.2获取Ghost源代码
 Ghost 目前官网不再提供下载，它的源代码目前托管在 GitHub 上。首先，我们需要找一个合适的位置，先创建个文件夹： 
 `mkdir ghost #ghost可以替换成你喜欢的名字`
 然后，我们进入这个文件夹，获取Ghost的源代码。
-```
+
+```shell
 cd ghost  
 wget https://github.com/TryGhost/Ghost/releases/download/0.11.4/Ghost-0.11.4.zip #下载Ghost  
 unzip Ghost-0.11.4.zip #解压压缩包    
@@ -68,7 +72,7 @@ rm Ghost-0.11.4.zip #删除源代码压缩包
 * 通过 `service supervisor start` 确保 Supervisor 运行  
 * 为 Ghost 创建一个启动脚本。通常为 `/etc/supervisor/conf.d/ghost.conf` ，例如：   
 
-```
+```conf
 [program:ghost]
 command = node /path/to/ghost/index.js
 directory = /path/to/ghost
@@ -92,9 +96,8 @@ Linux 系统在启动的时候会运行初始化脚本。这些脚本通常存�
    
 * 使用以下命令创建 `/etc/init.d/ghost` 文件：  
 
-```
-$ sudo curl https://raw.githubusercontent.com/TryGhost/Ghost-Config/master/init.d/ghost \
-  -o /etc/init.d/ghost
+```shell
+$ sudo curl https://raw.githubusercontent.com/TryGhost/Ghost-Config/master/init.d/ghost \ -o /etc/init.d/ghost
 ```  
 
 * 使用 `nano /etc/init.d/ghost` 命令打开文件并检查以下内容：  
@@ -104,48 +107,63 @@ $ sudo curl https://raw.githubusercontent.com/TryGhost/Ghost-Config/master/init.
 * 检查 `DAEMON` 变量的值是否和 `which node` 的输出值相同   
   
 * 这个初始化脚本将在你的系统上以它自己的 Ghost 用户和用户组运行，使用以下命令来创建：  
-```
+
+```shell
 $ sudo useradd -r ghost -U
 ```
+
 * 确保 Ghost 用户可以访问安装目录：  
-```
+
+```shell
 $ sudo chown -R ghost:ghost /你的 Ghost 安装目录
 ```  
+
 * 使用以下命令给这个初始化脚本加上可执行权限：  
-```
+
+```shell
 $ sudo chmod 755 /etc/init.d/ghost
 ```  
 * 现在你可以使用以下的命令来控制 Ghost ：  
-```
+
+```shell
 $ sudo service ghost start
 $ sudo service ghost stop
 $ sudo service ghost restart
 $ sudo service ghost status
 ```  
+
 * 为了让 Ghost 能在系统启动时同时启动，我们必须要将刚刚创建的初始化脚本注册为为启动项。 执行以下两个命令：  
-```
+
+```shell
 $ sudo update-rc.d ghost defaults
 $ sudo update-rc.d ghost enable
 ```
+
 * 为了保证你的用户可以更改 Ghost 目录里的文件和默认的 `config.js` ，需要将你加入 ghost 用户组中：  
-```
+
+```shell
 $ sudo adduser 你的用户名 ghost
 ```   
+
 如果你现在重启你的服务器，Ghost 应该会自动运行。
+
 >**该块内容摘自Ghost中文Doc**
+
 ### 使用Nginx代理访问
 如果你已经让 Ghost 一直运行了，你也可以设置一个代理服务器让你的博客可以使用域名访问。以下的示例假定你的操作系统是 Ubuntu 12.04 ，使用 Nginx 作为你的Web服务器，已经使用以上任意一种方法让 Ghost 在后台运行。  
 
 * 安装 nginx
-```
+
+```shell
 $ sudo apt-get install nginx
-```  
+```
+
 *这个命令将会安装nginx并且设定好所有必需的目录和基础配置。*
 
 * 配置你的站点
     - 在 `/etc/nginx/sites-available` 创建一个 `ghost.conf` 文件  
     - 使用文本编辑器打开这个文件 (e.g. `sudo nano /etc/nginx/sites-available/ghost.conf`) 把以下内容复制进这个文件  
-```
+```conf
 server {
     listen 80;
     server_name example.com;
@@ -157,14 +175,18 @@ server {
     }
 }
 ```
+
    - 将 server_name 的值改为你的域名  
 
    - 把你的配置文件软链接到 sites-enabled 文件夹下:  
-```
+
+```shell
 $ sudo ln -s /etc/nginx/sites-available/ghost.conf /etc/nginx/sites-enabled/ghost.conf
-```  
-   - 重启 nginx
 ```
+
+   - 重启 nginx
+
+```shell
 $ sudo service nginx restart
 ```
 至此，你的网站已经可以通过域名直接访问了。
@@ -176,6 +198,7 @@ Ghost 默认使用 sqlite3 数据库，对于一般使用足够了，但是内�
 Ghost 安装目录下面有一个配置文件例子 -- `config.example.js`，我们复制一份这个文件，并修改名称为 `config.js`。  
   
 在生产环境下 Ghost 系统会加载 `production` 段的配置信息，因此，把 MySQL 的配置信息写到这一段就行。代码如下：  
+
 ```JavaScript
 // # Ghost Configuration
 // Setup your Ghost install for various environments
@@ -322,6 +345,7 @@ config = {
 // Export config
 module.exports = config;
 ```  
+
 *配图会在近期加入*
 
 > 参考：[Ghost官方Docs](http://docs.ghost.org/zh/)    

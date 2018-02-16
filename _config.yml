@@ -97,3 +97,46 @@ live2d:
   verticalOffset: -20 # The offset of the bottom. default: -20
   id: live2dcanvas # The ID of the live2d element. default: live2dcanvas
   deviceJsSource: local # The source of the current-device script. default: local
+
+# All Minify
+all_minifier: true
+
+# HTML Minify
+html_minifier:
+  enable: true
+  ignore_error: false
+  silent: false
+  exclude:
+
+# JavaScript Concator & Minify
+js_concator:
+  enable: false
+  bundle_path: '/js/core.js'
+  front: false
+  silent: false
+
+js_minifier:
+  enable: true
+  mangle: true
+  silent: false
+#  output:
+#  compress:
+  exclude: 
+    - '*.min.js'
+
+# CSS Minify
+css_minifier:
+  enable: true
+  silent: false
+  exclude: 
+    - '*.min.css'
+
+# Image Minify
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+  silent: false
