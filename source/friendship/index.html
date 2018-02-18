@@ -399,11 +399,11 @@
         if (obj.dataset) {
           // is HTML5
           obj.onclick = function () {
-            window.location.href = this.dataset.href;
+            window.open(this.dataset.href);
           }
         } else {
           obj.onclick = function () {
-            window.location.href = this.getAttribute('data-href');
+            window.open(this.getAttribute('data-href'));
           }
         }
       }
