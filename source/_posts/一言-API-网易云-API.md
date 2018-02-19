@@ -37,7 +37,7 @@ https://api.a632079.me?callback=poi&encode=text
 
 #### 网易云
 接口: `https://api.a632079.me/nm`  
-支持一下 8 个功能：  
+支持以下 ~~8~~ 10 个功能：  
 * 搜索曲目 - `https://api.a632079.me/nm/search/:name`  
 * 获得歌单 - `https://api.a632079.me/nm/playlist/:id`  
 * 获得曲图 - `https://api.a632079.me/nm/picture/:id/:height?`  
