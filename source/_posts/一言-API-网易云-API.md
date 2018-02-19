@@ -14,7 +14,7 @@ toc: true
 >  动漫也好、小说也好、网络也好，不论在哪里，我们总会看到有那么一两个句子能穿透你的心。我们把这些句子汇聚起来，形成一言网络，以传递更多的感动。如果可以，我们希望我们没有停止服务的那一天。  
 > 简单来说，一言指的就是一句话，可以是动漫中的台词，也可以是网络上的各种小段子。  
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://cdn.a632079.me/163music.html?playlist=492926375" style="margin:0"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="https://cdn.a632079.me/163music.html?playlist=492926375&autoplay=true" style="margin:0"></iframe>
 
 ### 何为 网易云？
 Emmmm, 我想这个没啥好说的。
