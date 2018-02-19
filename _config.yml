@@ -94,6 +94,7 @@ excerpt_length: 200
 # deploy:
 ##  tape:
 
+# live 2d
 live2d:
   enable: true
   scriptFrom: local
@@ -105,6 +106,10 @@ live2d:
     height: 150
   mobile:
     show: false
+
+# SiteMap
+sitemap:
+    path: sitemap.xml
 
 # All Minify
 all_minifier: true

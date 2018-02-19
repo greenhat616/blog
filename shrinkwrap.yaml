@@ -6,6 +6,7 @@ dependencies:
   hexo-generator-category: 0.1.3
   hexo-generator-index: 0.2.1
   hexo-generator-search: 2.2.0
+  hexo-generator-seo-friendly-sitemap: 0.0.21
   hexo-generator-tag: 0.2.0
   hexo-helper-live2d: 3.0.0
   hexo-renderer-ejs: 0.3.1
@@ -1158,6 +1159,13 @@ packages:
     dev: false
     resolution:
       integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+  /ejs/2.3.4:
+    deprecated: Critical security bugs fixed in 2.5.5
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-PHbKoJZks1g7ADevncE2557Gi5g=
   /ejs/2.5.7:
     dev: false
     engines:
@@ -2052,6 +2060,19 @@ packages:
       node: '>= 0.10.0'
     resolution:
       integrity: sha1-G29Eyq+lhILNnxHnZQjRZJsdQP8=
+  /hexo-generator-seo-friendly-sitemap/0.0.21:
+    dependencies:
+      bluebird: 3.5.1
+      ejs: 2.3.4
+      lodash: 4.17.5
+      moment: 2.11.2
+      pretty-data: 0.40.0
+      url-join: 1.1.0
+    dev: false
+    engines:
+      node: '>=0.10'
+    resolution:
+      integrity: sha1-dS27K2bRBPNTacsgUBY2giloVqo=
   /hexo-generator-tag/0.2.0:
     dependencies:
       hexo-pagination: 0.0.2
@@ -3271,6 +3292,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-TrOP+VOLgBCLpGekWPPtQmjM/LE=
+  /moment/2.11.2:
+    dev: false
+    resolution:
+      integrity: sha1-h5aOX5WsA4wuQqyVnHWBnNP1KQE=
   /moment/2.20.1:
     resolution:
       integrity: sha512-Yh9y73JRljxW5QxN08Fner68eFLxM5ynNOAw2LbIB1YAGeQzZT8QFSUvkAz609Zf+IHhhaUxqZK8dG3W/+HEvg==
@@ -3838,6 +3863,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
+  /pretty-data/0.40.0:
+    dev: false
+    resolution:
+      integrity: sha1-Vyqo6iNGdGerlLa1Jmpv2cj93XI=
   /pretty-hrtime/1.0.3:
     dev: false
     engines:
@@ -4919,6 +4948,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-9rRQHC7EzdJrp4vnIilh3ndiFZg=
+  /url-join/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-dBxsL0WWxIMNZxhGCSDQySIC3Hg=
   /url-parse-lax/1.0.0:
     dependencies:
       prepend-http: 1.0.4
@@ -5246,6 +5279,7 @@ specifiers:
   hexo-generator-category: ^0.1.3
   hexo-generator-index: ^0.2.0
   hexo-generator-search: ^2.0.0
+  hexo-generator-seo-friendly-sitemap: ^0.0.21
   hexo-generator-tag: ^0.2.0
   hexo-helper-live2d: ^3.0.0
   hexo-migrator-ghost: ^0.1.0
