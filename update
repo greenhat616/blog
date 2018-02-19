@@ -1,19 +1,30 @@
 #!/usr/bin/env bash
+start=$(date +%s)
 # Update Main Repo
-echo 'Update Main Repo...'
+echo -e '\n \033[36m > Update Main Repo...\033[0m \n'
 git pull
 
 # CD Themes Dir
 cd themes/aero-dual
 
 # Update
-echo 'Update Themes Repo...'
+echo -e '\n \033[36m >  Update Themes Repo...\033[0m \n'
 git pull
 
 # Back
 cd ../..
 
 # Install Packages
-echo 'Update Dependences'
+echo -e '\n \033[36m > Update Dependences\033[0m \n'
 # pnpm i
 yarn
+
+echo -e '\n \033[36m > Clean Static files\033[0m \n'
+hexo Clean
+
+echo -e '\n \033[36m > Generate Static files\033[0m \n'
+hexo g
+end=$(date +%s)
+time=$(( $end - $start )) 
+echo -e '\n \033[36m > All well done.\033[0m \n'
+echo -e "\n \033[41;30m > Time consuming: $time s\033[0m \n"
