@@ -1,6 +1,16 @@
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
+# Server
+server:
+  port: 4000
+  log: false
+  ip: 0.0.0.0
+  compress: false
+  header: true
+  serveStatic:
+    extensions:
+    - html
 
 # Site
 title: 藤の青
@@ -85,19 +95,16 @@ excerpt_length: 200
 ##  tape:
 
 live2d:
-  model: miku # The model that you are willing to show. default: z16
-  width: 150 # The width of your model. default: 150
-  height: 300 # The height of your model. default: 300
-  scaling: 1 # The scaling of the resolution. default: 2
-  opacityDefault: 0.7 # The default opacity. default: 0.7
-  opacityHover: 1 # The opacity when hover. default: 1
-  mobileShow: false # Whether to show on mobile devices. default: true
-  mobileScaling: 0.5 # The scaling on mobile. default: 0.5
-  position: left # Which side the model is shown at. default: right
-  horizontalOffset: 0 # The horizontal offset. default: 0
-  verticalOffset: -20 # The offset of the bottom. default: -20
-  id: live2dcanvas # The ID of the live2d element. default: live2dcanvas
-  deviceJsSource: local # The source of the current-device script. default: local
+  enable: true
+  scriptFrom: local
+  model:
+    use: live2d-widget-model-miku
+  display:
+    position: left
+    width: 75
+    height: 150
+  mobile:
+    show: false
 
 # All Minify
 all_minifier: true
