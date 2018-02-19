@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Update Main Repo
+echo 'Update Main Repo...'
+git pull
+
+# CD Themes Dir
+cd themes/aero-dual
+
+# Update
+echo 'Update Themes Repo...'
+git pull
+
+# Back
+cd ../..
+
+# Install Packages
+echo 'Update Dependences'
+# pnpm i
+yarn
