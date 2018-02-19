@@ -2,30 +2,30 @@
 start=$(date +%s)
 # Update Main Repo
 echo -e "A632079's Blog Update Service. V0.2"
-echo -e '\n \033[36m> Update Main Repo...\033[0m \n'
+echo -e '\n\033[36m> Update Main Repo...\033[0m \n'
 git pull
 
 # CD Themes Dir
 cd themes/aero-dual
 
 # Update
-echo -e '\n \033[36m> Update Themes Repo...\033[0m \n'
+echo -e '\n\033[36m> Update Themes Repo...\033[0m \n'
 git pull
 
 # Back
 cd ../..
 
 # Install Packages
-echo -e '\n \033[36m> Update Dependences...\033[0m \n'
+echo -e '\n\033[36m> Update Dependences...\033[0m \n'
 # pnpm i
 yarn
 
-echo -e '\n \033[36m> Clean Static files...\033[0m \n'
+echo -e '\n\033[36m> Clean Static files...\033[0m \n'
 hexo Clean
 
-echo -e '\n \033[36m> Generate Static files...\033[0m \n'
+echo -e '\n\033[36m> Generate Static files...\033[0m \n'
 hexo g
 end=$(date +%s)
 time=$(( $end - $start )) 
-echo -e '\n \033[36m> All well done.\033[0m \n'
-echo -e "\n \033[36m> Time consuming:\033[0m \033[41;30m$time\033[0m \033[36ms\033[0m \n"
+echo -e '\n\033[36m> All well done.\033[0m \n'
+echo -e "\n\033[36m> Time consuming:\033[0m \033[41;30m $time \033[0m \033[36ms\033[0m \n"
