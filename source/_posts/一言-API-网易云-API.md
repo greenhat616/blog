@@ -50,4 +50,4 @@ https://api.a632079.me?callback=poi&encode=text
   * 启用歌词 - `https://api.a632079.me/nm/summary/:id?lyric=true`
 * 重定向
   * 歌曲 - `https://api.a632079.me/nm/redirect/music/:id`
-  * 图片 - `https://api.a632079.me/nm/redirect/picture/:id`
+  * ~~图片 - `https://api.a632079.me/nm/redirect/picture/:id`~~ 因为图片地址不改变，所以移除该 API
