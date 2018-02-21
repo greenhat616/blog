@@ -31,9 +31,6 @@
       background-color: unset;
     }
   </style>
-  <!-- Google Analytics -->
-
-
 </head>
 
 <body>
@@ -243,6 +240,26 @@
                         </div>
                       </div>
                     </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="card" data-href="https://impuss.com">
+                          <div class="card-body">
+                            <img data-origin="http://impuss-1254389633.cossh.myqcloud.com/cropped-sketch1509114236865-2.png" src="https://static.a632079.me/assets/images/avatar.png">
+                            <h1>小桐桐</h1>
+                            <p>我不是程序员啦！(#･∀･)</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="card" data-href="https://benzi.moe/">
+                          <div class="card-body">
+                            <img data-origin="https://gravatar.cat.net/avatar/2f3fbbc08f2714fa9dcfdbcb9428fb0e?d=mm" src="https://static.a632079.me/assets/images/avatar.png">
+                            <h1>Tomato</h1>
+                            <p>Undefined.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
             </div>     
             <blockquote>
               <p><strong>友链信息：</strong></p>
@@ -320,36 +337,8 @@
       });
     });
   </script>
-
-
-  <div id="hexo-helper-live2d">
-    <canvas id="live2dcanvas" width="150" height="300"></canvas>
-  </div>
-  <style>
-    #live2dcanvas {
-      position: fixed;
-      width: 150px;
-      height: 300px;
-      opacity: 0.7;
-      left: 0px;
-      z-index: 999;
-      pointer-events: none;
-      bottom: -20px;
-    }
-  </style>
-  <script type="text/javascript" src="/live2d/device.min.js"></script>
-  <script type="text/javascript">
-    const loadScript = function loadScript(c, b) { var a = document.createElement("script"); a.type = "text/javascript"; "undefined" != typeof b && (a.readyState ? a.onreadystatechange = function () { if ("loaded" == a.readyState || "complete" == a.readyState) a.onreadystatechange = null, b() } : a.onload = function () { b() }); a.src = c; document.body.appendChild(a) };
-    (function () {
-      if ((typeof (device) != 'undefined') && (device.mobile())) {
-        var trElement = document.getElementById('hexo-helper-live2d');
-        trElement.parentNode.removeChild(trElement);
-        return;
-      } else
-        if (typeof (device) === 'undefined') console.error('Cannot find current-device script.');
-      loadScript("/live2d/script.js", function () { loadlive2d("live2dcanvas", "/live2d/assets/miku.model.json", 0.5); });
-    })();
-  </script>
+  <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script>
+  <script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false}});</script>
   <!-- Async Load Image -->
   <!-- 受制于 Hexo 的 Markdown 处理器， 无法全局应用，所以改成本页面专属 -->
   <script>
@@ -373,7 +362,7 @@
           if (obj.dataset) {
             console.log('开始异步加载图片: %s', obj.dataset.origin);
             loadImage(obj, obj.dataset.origin);
-          } else {
+          } else if (obj.getAttribute('data-origin')) {
             console.log('开始异步加载图片: %s', obj.getAttribute('data-origin'));
             loadImage(obj, obj.getAttribute('data-origin'));
           }
@@ -391,7 +380,7 @@
           if (obj.dataset) {
             console.log('开始异步加载图片: %s', obj.dataset.origin);
             loadImage(obj, obj.dataset.origin);
-          } else {
+          } else if(obj.getAttribute('data-origin')){
             console.log('开始异步加载图片: %s', obj.getAttribute('data-origin'));
             loadImage(obj, obj.getAttribute('data-origin'));
           }

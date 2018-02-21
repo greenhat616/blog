@@ -3,7 +3,7 @@ title: 一言 API & 网易云 API
 tags: [ "apis", "api", "hitokoto", "netease"]
 permalink: teng-koa
 id: 14
-updated: '2018-01-31 00:59:49'
+updated: '2018-02-21 16:31:47'
 date: 2018-02-19 16:11:47
 cover: https://piccdn.freejishu.com/images/2016/07/18/59fe422cee6a2b825e4521ace38cc8b0.jpg!/format/jpg
 toc: true
@@ -37,6 +37,9 @@ https://api.a632079.me?callback=poi&encode=text
 
 #### 网易云
 接口: `https://api.a632079.me/nm`  
+
+> 目前该接口已开启缓存服务 （开启检测的概要查询缓存 7 天， 其余数据缓存 2 小时）
+
 支持以下 ~~8~~ 10 个功能：  
 * 搜索曲目 - `https://api.a632079.me/nm/search/:name`  
 * 获得歌单 - `https://api.a632079.me/nm/playlist/:id`  
@@ -48,6 +51,10 @@ https://api.a632079.me?callback=poi&encode=text
 * 获得细节 - `https://api.a632079.me/nm/detail/:id`  
 * 获得概要 - `https://api.a632079.me/nm/summary/:id`
   * 启用歌词 - `https://api.a632079.me/nm/summary/:id?lyric=true`
+  * 关闭检测 - `https://api.a632079.me/nm/summary/:id?quick=true`
+    * 默认开启检测， 目的是筛除无法播放的歌曲（未返回 URL）
+  * 优化结果 - `https://api.a632079.me/nm/summary/:id?common=true`
+  * 调用示例 -  `https://api.a632079.me/nm/summary/28391863,22640061?common=true&lyric=true&quick=true`
 * 重定向
   * 歌曲 - `https://api.a632079.me/nm/redirect/music/:id`
   * ~~图片 - `https://api.a632079.me/nm/redirect/picture/:id`~~ 因为图片地址不改变，所以移除该 API
