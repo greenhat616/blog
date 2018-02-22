@@ -244,7 +244,7 @@
                       <div class="col-lg-6">
                         <div class="card" data-href="https://impuss.com">
                           <div class="card-body">
-                            <img data-origin="http://impuss-1254389633.cossh.myqcloud.com/cropped-sketch1509114236865-2.png" src="https://static.a632079.me/assets/images/avatar.png">
+                            <img data-origin="https://impuss-1254389633.cossh.myqcloud.com/cropped-sketch1509114236865-2.png" src="https://static.a632079.me/assets/images/avatar.png">
                             <h1>小桐桐</h1>
                             <p>我不是程序员啦！(#･∀･)</p>
                           </div>
@@ -256,6 +256,17 @@
                             <img data-origin="https://gravatar.cat.net/avatar/2f3fbbc08f2714fa9dcfdbcb9428fb0e?d=mm" src="https://static.a632079.me/assets/images/avatar.png">
                             <h1>Tomato</h1>
                             <p>Undefined.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="card" data-href="https://www.hiczp.com/">
+                          <div class="card-body">
+                            <img data-origin="https://avatars2.githubusercontent.com/u/17246126" src="https://static.a632079.me/assets/images/avatar.png">
+                            <h1>CPZ的装逼站</h1>
+                            <p>快来一起装逼→_→/p>
                           </div>
                         </div>
                       </div>
@@ -359,7 +370,7 @@
         if (obj.getBoundingClientRect().top < document.documentElement.clientHeight && !obj.isLoad) {
           obj.isLoad = true;
           // 先调用 HTML5 方法
-          if (obj.dataset) {
+          if (obj.dataset && obj.dataset.origin) {
             console.log('开始异步加载图片: %s', obj.dataset.origin);
             loadImage(obj, obj.dataset.origin);
           } else if (obj.getAttribute('data-origin')) {
@@ -377,7 +388,7 @@
       for (obj of images) {
         if (obj.getBoundingClientRect().top - lazy < document.documentElement.clientHeight && !obj.isLoad) {
           obj.isLoad = true;
-          if (obj.dataset) {
+          if (obj.dataset && obj.dataset.origin) {
             console.log('开始异步加载图片: %s', obj.dataset.origin);
             loadImage(obj, obj.dataset.origin);
           } else if(obj.getAttribute('data-origin')){
