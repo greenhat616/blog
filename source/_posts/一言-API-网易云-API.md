@@ -3,11 +3,13 @@ title: 一言 API & 网易云 API
 tags: [ "apis", "api", "hitokoto", "netease"]
 permalink: teng-koa
 id: 14
-updated: '2018-02-21 16:31:47'
-date: 2018-02-19 16:11:47
+updated: '2018-02-22 16:31:47'
+date: 2018-02-22 16:11:47
 cover: https://piccdn.freejishu.com/images/2016/07/18/59fe422cee6a2b825e4521ace38cc8b0.jpg!/format/jpg
 toc: true
 ---
+
+> 当前 API 版本: `v1.2.2`
 
 ### 何为 一言？
   
@@ -30,21 +32,36 @@ Emmmm, 我想这个没啥好说的。
 
 接口： `https://api.a632079.me`   
 支持的参数: `http://hitokoto.cn/api`    
-与目前的接口不同，我们目前还支持提供 `JSONP` 返回。  
+与目前的接口不同，我们目前还支持提供 `JSONP` 和 `JS` 返回。  
 以下是一个调用例子：  
 https://api.a632079.me?callback=poi&encode=text
-
+https://api.a632079.me?encode=js&select=%23hitokoto  (`select` 为可选，默认为 `.hitokoto`. 记得要 URL 编码哦 `#` -> `%23`)
 
 #### 网易云
-接口: `https://api.a632079.me/nm`  
+接口: `https://api.a632079.me/nm/`  
 
 > 目前该接口已开启缓存服务 （开启检测的概要查询缓存 7 天， 其余数据缓存 2 小时）
+> 目前 API 正在逐步更新， 由 Linux API -> Web API 以增加 `offset` 和 `limit` 参数
 
 支持以下 ~~8~~ 10 个功能：  
-* 搜索曲目 - `https://api.a632079.me/nm/search/:name`  
+* 搜索曲目 - `https://api.a632079.me/nm/search/:keyword`
+  * 参数：
+    * 种类 - `type`:
+      * 专辑: `ALBUM`
+      * 歌手: `ARTIST`
+      * 电台: `DJ`
+      * 歌词: `LYRIC`
+      * 视频: `MV`
+      * 歌单: `PLAYLIST`
+      * 歌曲: `SONG` (默认)
+      * 用户: `USER`
+    * 偏移量 - `offset`
+    * 限制量 - `limit`
+      * 一次返回多少结果
+  * 调用示例: `https://api.a632079.me/nm/search/海阔天空?type=SONG&offset=0&limit=30`
 * 获得歌单 - `https://api.a632079.me/nm/playlist/:id`  
 * 获得曲图 - `https://api.a632079.me/nm/picture/:id/:height?`  
-* 获得作者 - `https://api.a632079.me/nm/artist/:id`  
+* 获得歌手 - `https://api.a632079.me/nm/artist/:id`  
 * 获得专辑 - `https://api.a632079.me/nm/album/:id`  
 * 获得歌词 - `https://api.a632079.me/nm/lyric/:id`  
 * 获得歌曲 - `https://api.a632079.me/nm/url/:id`   
@@ -58,3 +75,17 @@ https://api.a632079.me?callback=poi&encode=text
 * 重定向
   * 歌曲 - `https://api.a632079.me/nm/redirect/music/:id`
   * ~~图片 - `https://api.a632079.me/nm/redirect/picture/:id`~~ 因为图片地址不改变，所以移除该 API
+* 播放记录 - `https://api.a632079.me/nm/record/:uid`
+  * 获取周记录 - `https://api.a632079.me/nm/record/:uid?weekly=true`
+* 歌曲评论 - `https://api.a632079.me/nm/comment/music/:id`
+  * 可选参数 -  `offset` `limit`
+  * 调用示例 - `https://api.a632079.me/nm/comment/music/28391863?offset=0&limit=100`
+* 视频链接 - `https://api.a632079.me/nm/url/mv/:mvid`
+  * 受上级 SDK 影响， 暂时 302 至另一个接口
+* 用户电台 - `https://api.a632079.me/nm/user/dj/:uid`
+  * 参数 - `offset` `limit`
+  * 调用示例 - `https://api.a632079.me/nm/user/dj/91239965?limit=30&offset=0`
+* 电台节目 - `https://api.a632079.me/nm/dj/:rid`
+  * 参数 - `offset` `limit`
+  * 调用示例 - `https://api.a632079.me/nm/dj/336355127?limit=30&offset=1`
+* 电台细节 - `https://api.a632079.me/nm/dj/detail/:rid`
