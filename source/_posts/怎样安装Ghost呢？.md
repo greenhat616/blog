@@ -6,7 +6,7 @@ id: 5
 updated: '2017-08-23 11:44:42'
 date: 2017-01-17 18:29:50
 toc: true
-cover: https://img.a632079.me/uploads/2017/08/427988,106.jpg
+cover: https://imgcdn.a632079.me/uploads/2017/08/427988,106.jpg
 ---
 
 > **Before All :**
