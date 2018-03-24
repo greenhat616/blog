@@ -8,7 +8,7 @@ date: 2017-01-28 17:50:33
 cover: https://piccdn.freejishu.com/images/2017/01/26/e1c0.jpg
 ---
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="https://cdn.a632079.me/163cplayer.html?playlist=41666363&autoplay=true"></iframe> 
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="https://cdn.a632079.me/163cplayer.html?playlist=41666363"></iframe> 
 
 ### 历时4日，完全翻译  
 Nodebb在很长时间中简体中文的翻译都是缺失的，我对于这种情况感到十分困惑。在了解到前一届翻译组似乎停止翻译的工作的情况下，我决定号召我们站长群里面的有志人士来参加Nodebb的翻译工程。

@@ -14,7 +14,7 @@ cover: https://piccdn.freejishu.com/images/2016/10/03/a76f44e1a7b904cae790d93eab
 * 一个原因是：我看到很多和我一样的PHP新手都喜欢建立不同的文件(例如`index.php,upload.php,avatar.php,push.php`)  
 * 另一个原因是：我自己也是新手，渴望获得大佬们的指教**~~（说白就是求大佬怒喷）~~**   
 废话不多说，我要开始自卖自夸我的设计了。
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="https://cdn.a632079.me/163cplayer.html?playlist=28524464&autoplay=true"></iframe>  
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="106" src="https://cdn.a632079.me/163cplayer.html?playlist=28524464"></iframe>  
 
 ### 目录
 ```
