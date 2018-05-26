@@ -3,13 +3,13 @@ title: 一言 API & 网易云 API
 tags: [ "apis", "api", "hitokoto", "netease"]
 permalink: teng-koa
 id: 14
-updated: '2018-02-22 16:31:47'
+updated: '2018-05-26 21:15:47'
 date: 2018-02-22 16:11:47
 cover: https://piccdn.freejishu.com/images/2016/07/18/59fe422cee6a2b825e4521ace38cc8b0.jpg!/format/jpg
 toc: true
 ---
 
-> 当前 API 版本: `v1.2.3`
+> 当前 API 版本: `v1.4.3`
 
 ### 何为 一言？
   
@@ -22,7 +22,7 @@ toc: true
 Emmmm, 我想这个没啥好说的。
 
 ### 使用
-> 项目实际是个 Live Demo，所以仅保证可用，不保证速度。  
+> 项目实际是个 Live Demo，~~所以仅保证可用，不保证速度。~~ 目前本接口也是 `v1.hitokoto.cn` 的子接口， 稳定性保障哦~
 > 项目基于 Teng-koa (https://github.com/a632079/teng-koa) 还望使用之余给个 Star~
 
 #### 状态统计
