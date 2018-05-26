@@ -1,6 +1,5 @@
 ---
 title: 使用 MacType 改善 Windows 字体渲染
-tags: [ "apis", "api", "hitokoto", "netease"]
 permalink: mactype-improve-windows-font-render
 updated: '2018-05-25 21:25:37'
 date: 2018-05-25 21:25:37

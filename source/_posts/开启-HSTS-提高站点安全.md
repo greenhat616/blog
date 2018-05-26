@@ -2,9 +2,9 @@
 title: '开启 HSTS, 提高站点安全'
 updated: '2018-05-26 22:11:50'
 date: 2018-05-26 22:11:50
-permalink:
+permalink: hsts
 tags: ['hsts', '站点安全']
-cover:
+cover: https://piccdn.freejishu.com/images/2016/04/04/1173415.jpg
 toc: false
 ---
 ![alt](https://imgcdn.a632079.me/uploads/2018/05/TIM截图20180526221658.png)
