@@ -3,7 +3,7 @@ title: 'win10 去除字体 Hinting， 带来美妙体验'
 updated: '2018-08-21 05:37:48'
 toc: true
 date: 2018-08-21 13:37:48
-permalink:
+permalink: "win10-remove-font-hinting"
 tags: ["win10", "字体渲染", "显示", "黑科技"]
 cover: "https://piccdn.freejishu.com/images/2016/10/17/7baee256388fec61da822b2447d5d8b9.jpg"
 ---
