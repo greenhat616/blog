@@ -45,6 +45,10 @@ Windows 10 的字体渲染问题分为两个方面。
 
 最后， 你就会发现使用 DirectWrite 渲染的界面中的字体无比锐利清晰。
 
+> 假如， 您的字体文件过多。 或者是包含大量GASP信息错误的字体（脚本可能大量报错）， 您可以选择使用我打包的 Fonts 文件夹来进行替换。
+> 下载链接: https://mega.nz/#!WqBmza6T!WErpb5j1ePbdM9NwQawqVDrQKmzu22l3_9hf9E4xP9U (下载速度取决于您的网速)
+
+
 ![Edge渲染样式](https://cdn.nodebb-cn.org/assets/d742681b-f096-4355-b2d1-7e8a0832902d.png)
 
 > 参考:
