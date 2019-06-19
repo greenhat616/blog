@@ -2,7 +2,7 @@
 title: '小记: 迁移至 Hexo'
 date: 2018-02-15 22:52:46
 tags: ["技术", "搬迁", "Hexo"]
-cover: https://img.a632079.me/uploads/2017/08/1319288,106.jpg
+cover: https://imgcdn.a632079.me/uploads/2017/08/1319288,106.jpg
 ---
 
 今年是 2018， 狗年， 是新的一年。 咱博客自上线至今已经有 3 年， 期间使用过 WordPress, Z-Blog, Emlog, Typecho, Ghost。但总是觉得太过繁重， 毕竟个人博客嘛。  
