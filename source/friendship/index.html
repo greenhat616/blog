@@ -131,7 +131,7 @@
 
           <!-- Post Main Content -->
           <div class="post-content">
-            <h2 id="前路忐忑，后会无期"><a href="#前路忐忑，后会无期" class="headerlink" title="前路忐忑，后会无期"></a>前路忐忑，后会无期</h2>
+            <h2 id="前路忐忑，后会有期"><a href="#前路忐忑，后会有期" class="headerlink" title="前路忐忑，后会有期"></a>前路忐忑，后会有期</h2>
             <blockquote>
               <p>从何时起不再留意，夜空的星光呢？<br>抬头仰望夏日的天空，我遗忘了什么？<br>风静静地吹拂着，像是在说“再见”。<br>——End of the World 《花鳥風月》</p>
             </blockquote>
@@ -491,7 +491,7 @@
     };
     window.ValineConfig = Object.assign({
       el: '#comment',
-      path: window.location.pathname,
+      path: '/friendship/',
     }, ValineConfigString);
     delete window.ValineConfigString;
   </script>
@@ -525,6 +525,12 @@
   </footer>
 
   <!-- After Footer Scripts -->
+  <script>
+    // 检测是否为 /friendship/, 不是则跳转。
+    if (window.location.pathname !== '/friendship/') {
+      window.location.href = 'https://i.a632079.me/friendship/'
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.12.0/build/highlight.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@latest/dist/umd/popper-utils.min.js"></script>
