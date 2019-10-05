@@ -205,6 +205,31 @@
                   </div>
                 </div>
               </div>
+
+              <div class="row">
+                  <div class="col-lg-6">
+                    <div class="card" data-href="#">
+                      <div class="card-body">
+                        <img data-origin="https://i.loli.net/2019/10/06/ZUcYmMQwBGJLXEO.jpg"
+                          src="https://static.a632079.me/assets/images/avatar.png">
+                        <h1>ShadowMoon</h1>
+                        <p>我的闺蜜；治愈系，策略长。</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="card" data-href="#">
+                      <div class="card-body">
+                        <img
+                          data-origin="https://i.loli.net/2019/10/06/9JGsVRepdcEiBx5.jpg"
+                          src="https://static.a632079.me/assets/images/avatar.png">
+                        <h1>Chocolaty</h1>
+                        <p>我的闺蜜；运算，分析，实现！</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               <div class="row">
                 <div class="col-lg-6">
                   <div class="card" data-href="https://blog.lwl12.com/">
@@ -722,11 +747,15 @@
         if (obj.dataset) {
           // is HTML5
           obj.onclick = function () {
-            window.open(this.dataset.href);
+            if (this.dataset.href != '#') {
+              window.open(this.dataset.href);
+            }
           }
         } else {
           obj.onclick = function () {
-            window.open(this.getAttribute('data-href'));
+            if (this.dataset.href != '#') {
+              window.open(this.getAttribute('data-href'));
+            }
           }
         }
       }
