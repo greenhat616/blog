@@ -24,7 +24,8 @@
     "hexo-util": "^1.8.1",
     "html-to-text": "^3.3.0",
     "live2d-widget-model-miku": "^1.0.5",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "hexo-migrator-ghost": "^0.1.0"
