@@ -19,7 +19,10 @@
 
   <link rel="icon" href="https://cdn.a632079.me/favicon.ico">
 
-
+  <link rel="preconnect" href="https://cdn.jsdelivr.net/">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link rel="preconnect" href="https://i.loli.net/">
   <!-- Site Title -->
   <title>友情链接 | 藤の青</title>
 
@@ -30,12 +33,18 @@
     .site-header::before {
       background-color: unset;
     }
+
     .typo p {
       text-indent: 2em;
     }
-    .typo blockquote>p,.card-body p,#comment p,.v p {
+
+    .typo blockquote>p,
+    .card-body p,
+    #comment p,
+    .v p {
       text-indent: 0;
     }
+
     .v a {
       border-bottom: 0;
     }
@@ -181,393 +190,15 @@
               <p>We can live without our friends, but not without our neighbours.</p>
             </blockquote>
             <p>人生乐在相知心。人的一生，不断成长，不断结识新知。忘年之交，如沐春风，甘若霖。首先感谢诸网友在我困难的时候帮助我，我会铭记于心！<br>交换友链，便是你我结识的第一步。愿我们会有更近一步的了解。</p><br>
-            <div class="friendship">
+            <div class="friendship" id="friendship">
               <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://blog.woc.moe">
+                <div class="col-lg-6" v-for="(item, index) in friendshipList" :key="index">
+                  <div class="card" :data-href="item.href">
                     <div class="card-body">
-                      <img data-origin="https://avatars3.githubusercontent.com/u/13348805"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>啪皮</h1>
-                      <p>农药大佬， 淘客大佬</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.freejishu.com">
-                    <div class="card-body">
-                      <img
-                        data-origin="https://secure.gravatar.com/avatar/998a4820101c5491c986a7faf10457c8?s=500&d=mm&r=g"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>freejishu</h1>
-                      <p>一个全新的境界</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                  <div class="col-lg-6">
-                    <div class="card" data-href="#">
-                      <div class="card-body">
-                        <img data-origin="https://i.loli.net/2019/10/06/ZUcYmMQwBGJLXEO.jpg"
-                          src="https://static.a632079.me/assets/images/avatar.png">
-                        <h1>ShadowMoon</h1>
-                        <p>我的闺蜜；治愈系，策略长。</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="card" data-href="#">
-                      <div class="card-body">
-                        <img
-                          data-origin="https://i.loli.net/2019/10/06/9JGsVRepdcEiBx5.jpg"
-                          src="https://static.a632079.me/assets/images/avatar.png">
-                        <h1>Chocolaty</h1>
-                        <p>我的闺蜜；运算，分析，实现！</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://blog.lwl12.com/">
-                    <div class="card-body">
-                      <img
-                        data-origin="https://gravatar.cat.net/avatar/124d03a731ac13b3ab5ffa6762bd12c7?s=500&d=identicon&r=g"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>LWL的自由天空</h1>
-                      <p>大大大大佬..鼠？</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="http://www.xiaolin.in">
-                    <div class="card-body">
-                      <img data-origin="https://storage.xiaolin.in/cw.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>小霖</h1>
-                      <p>听说是一个很软的萝莉呢~</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://about.nodebb-cn.org">
-                    <div class="card-body">
-                      <img data-origin="https://community.nodebb-cn.org/favicon.ico"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>NodeBB热</h1>
-                      <p>NodeBB 中国官方社群</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.fczbl.vip">
-                    <div class="card-body">
-                      <img data-origin="https://gravatar.loli.net/avatar/5e6892e999ca8c85a358d21164167f38?s=192"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>XB2016</h1>
-                      <p>合法萝莉，殿堂级女装RBQ!</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.fawdlstty.com">
-                    <div class="card-body">
-                      <img data-origin="https://i.loli.net/2019/06/19/5d09ff44ccaac24270.jpg"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>Fawdlstty</h1>
-                      <p>一只感觉自己萌萌哒的程序猿~~</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://tyzual.com">
-                    <div class="card-body">
-                      <img data-origin="https://i.loli.net/2019/06/19/5d09f7f3c24c596330.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>Tyzual</h1>
-                      <p>喵窝。LOLI控，猫耳控，狐耳控</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://imjad.cn">
-                    <div class="card-body">
-                      <img data-origin="https://secure.gravatar.com/avatar/1f1b82f7ab1429a50424ac18dce65e37?s=100"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>Ad's Blog</h1>
-                      <p>浊以静之徐清</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://xtaolink.cn">
-                    <div class="card-body">
-                      <img data-origin="https://q.qlogo.cn/headimg_dl?dst_uin=1344089750&spec=640"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>深海小涛</h1>
-                      <p>一个辣鸡技术博客</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://impuss.com">
-                    <div class="card-body">
-                      <img data-origin="https://impuss-1254389633.cossh.myqcloud.com/cropped-sketch1509114236865-2.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>小桐桐</h1>
-                      <p>我不是程序员啦！(#･∀･)</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://benzi.moe/">
-                    <div class="card-body">
-                      <img data-origin="https://gravatar.cat.net/avatar/2f3fbbc08f2714fa9dcfdbcb9428fb0e?d=mm"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>Tomato</h1>
-                      <p>Undefined.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.hiczp.com/">
-                    <div class="card-body">
-                      <img data-origin="https://avatars2.githubusercontent.com/u/17246126"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>CPZ的装逼站</h1>
-                      <p>快来一起装逼→_→</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://diygod.me/">
-                    <div class="card-body">
-                      <img data-origin="https://i.loli.net/2019/06/19/5d09f8e106ffa88325.jpg"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>Diygod</h1>
-                      <p>Write the Code, Change the World.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://rainylog.com/">
-                    <div class="card-body">
-                      <img data-origin="https://rainylog.com/img/avatar.gif"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>Rainy</h1>
-                      <p>不问初心，记录时光</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.haotown.cn/">
-                    <div class="card-body">
-                      <img data-origin="https://gravatar.cat.net/avatar/d0b3bc8c616d20b72ba5d59a7a1c6c79?s=80&d=retro"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>HAOTOWN</h1>
-                      <p>伪码农</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.fghrsh.net/">
-                    <div class="card-body">
-                      <img data-origin="https://fp1.fghrsh.net/2017/10/11/d383a9ad4318c5b4332fe02845f5323a.jpg"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>FGHRSH</h1>
-                      <p>FGHRSH 的博客</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="http://myloveru.cn/">
-                    <div class="card-body">
-                      <img data-origin="https://q1.qlogo.cn/g?b=qq&nk=1273455947&s=100"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>北海</h1>
-                      <p>Unfiendly</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://blog.kudoran.com/">
-                    <div class="card-body">
-                      <img
-                        data-origin="https://secure.gravatar.com/userimage/133409508/189ea9839aa3348fae1e880557f0cd13.jpg?size=200"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>YiQike's Blog</h1>
-                      <p>世界无限大.且行且珍惜w;</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://xsiy.top/">
-                    <div class="card-body">
-                      <img data-origin="https://i.loli.net/2019/06/19/5d09fd8497aab15735.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>XSY</h1>
-                      <p>初二在读垃圾学生，不断学习中</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://ji.ci/">
-                    <div class="card-body">
-                      <img
-                        data-origin="https://secure.gravatar.com/avatar/432d8583e332c3c170e590c6dff16d7a?s=200&d=identicon&r=g"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>记此</h1>
-                      <p>修己安人。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.potatofield.cn/">
-                    <div class="card-body">
-                      <img data-origin="https://cn.gravatar.com/avatar/ec907c506a645c1c3f97f0587bd1d7e4?s=200&d=mm&r=g"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>马铃薯田地</h1>
-                      <p>土豆的摄影，土豆的随想，土豆的日常，这里是土豆哥的马铃薯田地。</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.hcyacg.com/">
-                    <div class="card-body">
-                      <img data-origin="https://www.hcyacg.com/1.jpg"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>HCY ACG!</h1>
-                      <p>萌新/大学党/黑长直控</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://Katyusha.net">
-                    <div class="card-body">
-                      <img data-origin="https://cn.gravatar.com/avatar/c575d632cd4409888bdf1ed06138f03d?s=500&r=pg&d=mm"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>卡秋莎的小窝</h1>
-                      <p>太懒了我不想动(•̀ω•́ 」∠)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://blog.ledemon.cn/">
-                    <div class="card-body">
-                      <img data-origin="https://blog.demonxu.com/images/avatar.jpg"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>Ledemon</h1>
-                      <p>时间仍在，是我们在飞逝~~~</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.ohyhello.com/">
-                    <div class="card-body">
-                      <img data-origin="https://file.ohyhello.com/uploads/2018/07/cropped-head2.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>ohyhello</h1>
-                      <p>路过此站的人， 上船，上船！</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://typeof.pw">
-                    <div class="card-body">
-                      <img data-origin="https://i.loli.net/2019/10/04/46TXinQ2Fm3szk5.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>@typeof</h1>
-                      <p>你好，世界。</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://tea9.xyz/">
-                    <div class="card-body">
-                      <img data-origin="https://i.loli.net/2019/10/04/bWhTEVMRGNX8cKy.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>tea9</h1>
-                      <p>前端渣/后端渣/安卓渣/啥都渣</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://qwqaq.com/">
-                    <div class="card-body">
-                      <img data-origin="https://i.loli.net/2019/10/04/mt3eJL57oidhMTF.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>QWQAQ</h1>
-                      <p>萌新而已 (～￣▽￣)～</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://blog.gzczy.top/">
-                    <div class="card-body">
-                      <img data-origin="https://gravatar.loli.net/avatar/d35f7d5ee6a7d8bf5dfbdc60dd07e226?d=mp&s=250"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>JAM</h1>
-                      <p>不忘初心，继续前行；千里之行，始于足下！</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://www.ouorz.com">
-                    <div class="card-body">
-                      <img data-origin="https://i.loli.net/2019/10/05/ELHo6cBZtbmu29W.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>TonyHe</h1>
-                      <p>Just A Poor Lifesinger</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="card" data-href="https://blog.geek-cloud.top/">
-                    <div class="card-body">
-                      <img data-origin="https://blog.geek-cloud.top/wp-content/uploads/2017/07/cropped-web-LOGOn-192x192.png"
-                        src="https://static.a632079.me/assets/images/avatar.png">
-                      <h1>Geek’s Blog</h1>
-                      <p>吾之记事本</p>
+                      <img :data-origin="item.icon"
+                        :src="onLoadImageUrl">
+                      <h1>{{item.name}}</h1>
+                      <p>{{item.desc}}</p>
                     </div>
                   </div>
                 </div>
@@ -598,11 +229,75 @@
     </div>
   </article>
 
-
+  <!--初始化 Vue.js-->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-md5@0.7.3/build/md5.min.js"></script>
+  <script>
+    new Vue({
+      el: '#friendship',
+      data: {
+        friendshipList: [],
+        onLoadImageUrl: 'https://static.a632079.me/assets/images/avatar.png'
+      },
+      methods: {
+        getGravatarURLByEmail (email) {
+          return this.getGravatarURLByHash(window.md5(email))
+        },
+        getGravatarURLByHash (hash) {
+          return 'https://fdn.geekzu.org/avatar/' + hash + '?d=mm&s=640'
+        },
+        getAvatarURLByQQ (qq) {
+          return 'https://q2.qlogo.cn/headimg_dl?dst_uin=' + qq + '&spec=640'
+        }
+      },
+      mounted () {
+        this.friendshipList = _.shuffle([
+          { href: 'https://blog.woc.moe', name: '啪皮', desc: '农药大佬， 淘客大佬', icon: 'https://q2.qlogo.cn/headimg_dl?dst_uin=947065098&spec=640' },
+          { href: 'https://www.freejishu.com', name: 'freejishu', desc: '一个全新的境界', icon: this.getGravatarURLByHash('998a4820101c5491c986a7faf10457c8') },
+          { href: '#', name: 'ShadowMoon', desc: '我的闺蜜；治愈系，策略长。', icon: 'https://i.loli.net/2019/10/06/ZUcYmMQwBGJLXEO.jpg' },
+          { href: '#', name: 'Chocolaty', desc: '我的闺蜜；运算，分析，实现！', icon: 'https://i.loli.net/2019/10/06/9JGsVRepdcEiBx5.jpg' },
+          { href: 'https://www.xiaolin.in', name: '小霖', desc: '听说是一个很软的萝莉呢~', icon: 'https://storage.xiaolin.in/cw.png' },
+          { href: 'https://about.nodebb-cn.org', name: 'NodeBB热', desc: 'NodeBB 中国官方社群', icon: 'https://community.nodebb-cn.org/favicon.ico' },
+          { href: 'https://moedog.org/', name: 'XB2016', desc: '合法萝莉，殿堂级女装RBQ!', icon: this.getGravatarURLByHash('5e6892e999ca8c85a358d21164167f38') },
+          { href: 'https://www.fawdlstty.com', name: 'Fawdlstty', desc: '一只感觉自己萌萌哒的程序猿~~', icon: 'https://i.loli.net/2019/06/19/5d09ff44ccaac24270.jpg' },
+          { href: 'https://tyzual.com', name: 'Tyzual', desc: '喵窝。LOLI控，猫耳控，狐耳控', icon: 'https://i.loli.net/2019/06/19/5d09f7f3c24c596330.png' },
+          { href: 'https://imjad.cn', name: "Ad's Blog", desc: '浊以静之徐清', icon: 'https://static.a632079.me/assets/images/avatar.png' },
+          { href: 'https://impuss.com', name: '小桐桐', desc: '我不是程序员啦！(#･∀･)', icon: 'https://impuss-1254389633.cossh.myqcloud.com/cropped-sketch1509114236865-2.png' },
+          { href: 'https://xtaolink.cn', name: '深海小涛', desc: '一个辣鸡技术博客', icon: 'https://q.qlogo.cn/headimg_dl?dst_uin=1344089750&spec=640' },
+          { href: 'https://benzi.moe/', name: 'Tomato', desc: 'Undefined.', icon: this.getGravatarURLByHash('2f3fbbc08f2714fa9dcfdbcb9428fb0e') },
+          { href: 'https://www.hiczp.com/', name: 'CPZ的装逼站', desc: '快来一起装逼→_→', icon: 'https://avatars2.githubusercontent.com/u/17246126' },
+          { href: 'https://diygod.me/', name: 'Diygod', desc: 'Write the Code, Change the World.', icon: 'https://i.loli.net/2019/06/19/5d09f8e106ffa88325.jpg' },
+          { href: 'https://rainylog.com/', name: 'Rainy', desc: '不问初心，记录时光。', icon: 'https://rainylog.com/img/avatar.gif' },
+          { href: 'https://www.haotown.cn/', name: 'HAOTOWN', desc: '伪码农', icon: this.getGravatarURLByHash('d0b3bc8c616d20b72ba5d59a7a1c6c79') },
+          { href: 'https://www.fghrsh.net/', name: 'FGHRSH', desc: 'FGHRSH 的博客', icon: 'https://fp1.fghrsh.net/2017/10/11/d383a9ad4318c5b4332fe02845f5323a.jpg' },
+          { href: 'http://myloveru.cn/', name: '北海', desc: 'Unfiendly', icon: 'https://q2.qlogo.cn/headimg_dl?dst_uin=1273455947&spec=640' },
+          { href: 'https://blog.kudoran.com/', name: "YiQike's Blog", desc: '世界无限大.且行且珍惜w', icon: this.getGravatarURLByHash('51a1dd78504892cbe131d08a45f3bdc9') },
+          { href: 'https://ji.ci/', name: '记此', desc: '修己安人。', icon: this.getGravatarURLByHash('432d8583e332c3c170e590c6dff16d7a') },
+          { href: 'https://www.potatofield.cn/', name: '马铃薯田地', desc: '土豆的摄影，土豆的随想，土豆的日常，这里是土豆哥的马铃薯田地。', icon: this.getGravatarURLByHash('ec907c506a645c1c3f97f0587bd1d7e4') },
+          { href: 'https://www.hcyacg.com/', name: 'HCY ACG!', desc: '萌新/大学党/黑长直控', icon: 'https://www.hcyacg.com/1.jpg' },
+          { href: 'https://Katyusha.net', name: '卡秋莎的小窝', desc: '太懒了我不想动(•̀ω•́ 」∠)', icon: this.getGravatarURLByHash('c575d632cd4409888bdf1ed06138f03d') },
+          { href: 'https://blog.ledemon.cn/', name: 'Ledemon', desc: '时间仍在，是我们在飞逝~~~', icon: 'https://blog.demonxu.com/images/avatar.jpg' },
+          { href: 'https://www.ohyhello.com/', name: 'ohyhello', desc: '路过此站的人， 上船，上船！', icon: 'https://file.ohyhello.com/uploads/2018/07/cropped-head2.png' },
+          { href: 'https://typeof.pw', name: '@typeof', desc: '你好，世界。', icon: 'https://i.loli.net/2019/10/04/46TXinQ2Fm3szk5.png' },
+          { href: 'https://tea9.xyz/', name: 'tea9', desc: '前端渣/后端渣/安卓渣/啥都渣', icon: 'https://i.loli.net/2019/10/04/bWhTEVMRGNX8cKy.png' },
+          { href: 'https://qwqaq.com/', name: 'QWQAQ', desc: '萌新而已 (～￣▽￣)～', icon: 'https://i.loli.net/2019/10/04/mt3eJL57oidhMTF.png' },
+          { href: 'https://blog.gzczy.top/', name: 'JAM', desc: '不忘初心，继续前行；千里之行，始于足下！', icon: this.getGravatarURLByHash('d35f7d5ee6a7d8bf5dfbdc60dd07e226') },
+          { href: 'https://www.ouorz.com', name: 'TonyHe', desc: 'Just A Poor Lifesinger', icon: 'https://i.loli.net/2019/10/05/ELHo6cBZtbmu29W.png' },
+          { href: 'https://blog.geek-cloud.top/', name: 'Geek’s Blog', desc: '吾之记事本', icon: 'https://blog.geek-cloud.top/wp-content/uploads/2017/07/cropped-web-LOGOn-192x192.png' },
+          { href: 'https://daidr.me', name: '戴兜的小屋', desc: '在迷失中寻找自我', icon: 'https://daidr.me/wp-content/uploads/2017/11/5_a-e1515336786629.png' },
+          { href: 'https://blog.xiaolin.mcxhz.cn', name: '寒小林的小窝', desc: '重度中二病，小男孩', icon: this.getAvatarURLByQQ('1475775412') },
+          { href: 'https://removeif.github.io', name: '辣椒の酱', desc: '后端开发，技术分享', icon: 'https://removeif.github.io/images/avatar.jpg' },
+          { href: 'https://ni-co.moe/', name: '神楽坂 白', desc: '二次元/死胖子(暂时)/拖延症/sony教徒/lovelive教徒/本子铺已经被我干死了', icon: 'https://ni-co.moe/dist/images/logo.jpg' },
+          // { href: '', name: '', desc: '', icon: '' },
+        ])
+      }
+    }).$mount('#friendship')
+  </script>
 
   <script>
     window.ValineConfigString = {
-      "notify": false,
+      "notify": true,
       "verify": false,
       "appId": "lbF4ajEDofgIbJLs1hGgxbTE-gzGzoHsz",
       "appKey": "yX3gjBPOuQXX3O7JuWUIi8K8",
@@ -700,7 +395,7 @@
     }
     (function init() {
       // 先清理一波控制台
-      console.clear()
+      // console.clear()
       var images = document.images;
       // 加载首屏图片
       for (obj of images) {
@@ -763,7 +458,7 @@
 
     // Load Player
     var songIds = [22814470, 28953120];
-    fetch("https://api.a632079.me/nm/summary/" + songIds.join(',') + '?lyric=true')
+    fetch("https://v1.hitokoto.cn/nm/summary/" + songIds.join(',') + '?lyric=true')
       .then(function (res) {
         return res.json();
       })
