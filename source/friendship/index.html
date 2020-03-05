@@ -193,7 +193,7 @@
             <div class="friendship" id="friendship">
               <div class="row">
                 <div class="col-lg-6" v-for="(item, index) in friendshipList" :key="index">
-                  <div class="card" :data-href="item.href">
+                  <div class="card" :data-href="item.href" @click="onClickRedirect(item.href)">
                     <div class="card-body">
                       <img :data-origin="item.icon"
                         :src="onLoadImageUrl">
@@ -249,6 +249,11 @@
         },
         getAvatarURLByQQ (qq) {
           return 'https://q2.qlogo.cn/headimg_dl?dst_uin=' + qq + '&spec=640'
+        },
+        onClickRedirect (href) {
+          if (href && href !== '#') {
+            window.open(href)
+          }
         }
       },
       mounted () {
@@ -414,27 +419,6 @@
     window.onscroll = function () {
       lazyload();
     };
-    (function BindCardRedirect() {
-      var cards = document.getElementsByClassName('card');
-      for (obj of cards) {
-        // console.log(obj);
-        if (obj.dataset) {
-          // is HTML5
-          obj.onclick = function () {
-            if (this.dataset.href != '#') {
-              window.open(this.dataset.href);
-            }
-          }
-        } else {
-          obj.onclick = function () {
-            if (this.dataset.href != '#') {
-              window.open(this.getAttribute('data-href'));
-            }
-          }
-        }
-      }
-    })()
-
     // Load Player
     var songIds = [22814470, 28953120];
     fetch("https://v1.hitokoto.cn/nm/summary/" + songIds.join(',') + '?lyric=true')
