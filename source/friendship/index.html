@@ -258,8 +258,7 @@
             return response.json()
           })
           .then(function (data) {
-            data = data.data
-            data.map(function (v) {
+            data.data.map(function (v) {
               if (v.qq) {
                 v.icon = _this.getAvatarURLByQQ(v.qq)
               } else if (v.hash) {
@@ -269,7 +268,7 @@
               }
               return v
             })
-            this.friendshipList = _.shuffle(data)
+            _this.friendshipList = _.shuffle(data.data)
           })
       }
     }).$mount('#friendship')
