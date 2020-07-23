@@ -32,7 +32,10 @@ jobs:
         echo "name:        ${{ steps.import_gpg.outputs.name }}"
         echo "email:       ${{ steps.import_gpg.outputs.email }}"
     - name: Update sub git modules
-      run: git submodule update --remote
+      run: |
+        git --version
+        git submodule update --init --recursive
+        git submodule update --remote
 
     - name: Commit update
       uses: stefanzweifel/git-auto-commit-action@v4
