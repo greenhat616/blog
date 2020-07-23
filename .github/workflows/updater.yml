@@ -5,7 +5,7 @@ name: Updater
 # events but only for the master branch
 on:
   schedule:
-  - cron: "*/5 * * * *"
+  - cron: "1 */2 * * *"
 jobs:
   # This workflow contains a single job called "build"
   updater:
