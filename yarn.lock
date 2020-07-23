@@ -2677,7 +2677,7 @@ hexo-server@^0.3.1:
     opn "^5.3.0"
     serve-static "^1.13.2"
 
-hexo-util@^1.4.0, hexo-util@^1.8.1, hexo-util@^1.9.1:
+hexo-util@^1.4.0, hexo-util@^1.9.1:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/hexo-util/-/hexo-util-1.9.1.tgz#15dc10d0dca474c978cdba9c20e8d0417ac993de"
   integrity sha512-B6+nVi4Zpy7NPzlIcTLn9YBGb2Ly0q11mRzg6DyFWg0IfcrfF4tlWO0vRXqJVhvRyg+tIfUihmgypkiUW1IjNQ==
