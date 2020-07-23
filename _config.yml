@@ -153,3 +153,9 @@ image_minifier:
   pngquant: false
   progressive: false
   silent: false
+  
+# Deployment
+deploy:
+  - type: git
+    branch: master
+    repo: git@e.coding.net:a632079-01/blog.git
