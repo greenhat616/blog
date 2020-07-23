@@ -466,7 +466,12 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.2.2, bluebird@^3.3.1, bluebird@^3.5.1, bluebird@^3.5.2, bluebird@^3.5.3, bluebird@^3.5.5:
+bluebird@3.5.4:
+  version "3.5.4"
+  resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.4.tgz#d6cc661595de30d5b3af5fcedd3c0b3ef6ec5714"
+  integrity sha512-FG+nFEZChJrbQ9tIccIfZJBz3J7mLrAhxakAbnrJWn8d7aKOC+LWifa0G+p4ZqKp4y13T7juYvdhq9NzKdsrjw==
+
+bluebird@^3.2.2, bluebird@^3.5.1, bluebird@^3.5.2, bluebird@^3.5.3, bluebird@^3.5.5:
   version "3.7.2"
   resolved "https://registry.npm.taobao.org/bluebird/download/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha1-nyKcFb4nJFT/qXOs4NvueaGww28=
@@ -1553,10 +1558,10 @@ ee-first@1.1.1:
   resolved "https://registry.npm.taobao.org/ee-first/download/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-ejs@2.3.4:
-  version "2.3.4"
-  resolved "https://registry.npm.taobao.org/ejs/download/ejs-2.3.4.tgz#3c76caa09664b3583b0037af9dc136e79ec68b98"
-  integrity sha1-PHbKoJZks1g7ADevncE2557Gi5g=
+ejs@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.6.1.tgz#498ec0d495655abc6f23cd61868d926464071aa0"
+  integrity sha512-0xy4A/twfrRCnkhfk8ErDi5DqdAsAqeGxht4xkCUrsvhhbQNs7E+4jV0CN7+NKIY0aHE72+XvqtBIXzD31ZbXQ==
 
 ejs@^2.6.1:
   version "2.7.4"
@@ -2556,17 +2561,17 @@ hexo-generator-search@^2.0.0:
     nunjucks "^3.0.1"
     utils-merge "^1.0.0"
 
-hexo-generator-seo-friendly-sitemap@^0.0.21:
-  version "0.0.21"
-  resolved "https://registry.npm.taobao.org/hexo-generator-seo-friendly-sitemap/download/hexo-generator-seo-friendly-sitemap-0.0.21.tgz#752dbb2b66d104f35369cb2050163682296856aa"
-  integrity sha1-dS27K2bRBPNTacsgUBY2giloVqo=
+hexo-generator-seo-friendly-sitemap@^0.0.25:
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/hexo-generator-seo-friendly-sitemap/-/hexo-generator-seo-friendly-sitemap-0.0.25.tgz#73a02197bc65a38738a0d3927128e2e48ceb29ce"
+  integrity sha512-SjAOFJ80yynWWPx7WENWVXYDoMOEI/xETM/6YE36DQJEFMDfQDx0p8gpuMZR1XTcMaEu4WtWG16dk1vwtyW+DA==
   dependencies:
-    bluebird "^3.3.1"
-    ejs "2.3.4"
-    lodash "^4.5.0"
-    moment "~2.11.2"
+    bluebird "3.5.4"
+    ejs "2.6.1"
+    lodash "4.17.11"
+    moment "2.24.0"
     pretty-data "0.40.0"
-    url-join "^1.1.0"
+    url-join "4.0.0"
 
 hexo-generator-tag@^1.0.0:
   version "1.0.0"
@@ -3573,12 +3578,17 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash@4.17.11:
+  version "4.17.11"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
+  integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+
 lodash@^3.6.0:
   version "3.10.1"
   resolved "https://registry.npm.taobao.org/lodash/download/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
   integrity sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
 
-lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.0, lodash@~4.17.12:
+lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.2.0, lodash@^4.3.0, lodash@~4.17.12:
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
@@ -3886,20 +3896,15 @@ moment-timezone@^0.5.21:
   dependencies:
     moment ">= 2.9.0"
 
-"moment@>= 2.9.0", moment@^2.10.6, moment@^2.22.2, moment@^2.9.0:
+moment@2.24.0:
   version "2.24.0"
   resolved "https://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha1-DQVdU/UFKqZTyfbraLtdEr9cK1s=
 
-moment@^2.24.0:
+"moment@>= 2.9.0", moment@^2.10.6, moment@^2.22.2, moment@^2.24.0, moment@^2.9.0:
   version "2.27.0"
   resolved "https://registry.npm.taobao.org/moment/download/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
   integrity sha1-i/9OPiaiNiIN/j423nVrbrqgEF0=
-
-moment@~2.11.2:
-  version "2.11.2"
-  resolved "https://registry.npm.taobao.org/moment/download/moment-2.11.2.tgz#87968e5f95ac038c2e42ac959c75819cd3f52901"
-  integrity sha1-h5aOX5WsA4wuQqyVnHWBnNP1KQE=
 
 morgan@^1.9.1:
   version "1.10.0"
@@ -6191,10 +6196,10 @@ urix@^0.1.0:
   resolved "https://registry.npm.taobao.org/urix/download/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
   integrity sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
 
-url-join@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npm.taobao.org/url-join/download/url-join-1.1.0.tgz#741c6c2f4596c4830d6718460920d0c92202dc78"
-  integrity sha1-dBxsL0WWxIMNZxhGCSDQySIC3Hg=
+url-join@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.0.tgz#4d3340e807d3773bda9991f8305acdcc2a665d2a"
+  integrity sha1-TTNA6AfTdzvamZH4MFrNzCpmXSo=
 
 url-parse-lax@^1.0.0:
   version "1.0.0"
