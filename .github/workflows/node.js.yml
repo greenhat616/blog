@@ -1,14 +1,11 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Blog CI/CD
 
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
 jobs:
   build:
 
@@ -38,4 +35,15 @@ jobs:
       name: Install dependencies...
     - name: Test build
       run: yarn run hexo generate
-
+    - name: Import SSH Key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        name: id_rsa # optional
+        known_hosts: ${{ secrets.SSH_KNOWNS_HOSTS }}
+    - name: Set up SSH user info
+      run: |
+        git config --global user.email "i@a632079.me"
+        git config --global user.name "a632079"
+    - name: Deploy blog
+      run: yarn hexo deploy
