@@ -1,0 +1,44 @@
+name: Updater
+# Updater is a ci process, intended to update sub git modules
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  schedule:
+  - cron: "*/5 * * * *"
+jobs:
+  # This workflow contains a single job called "build"
+  updater:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+    - name: Import GPG key
+      id: import_gpg
+      uses: crazy-max/ghaction-import-gpg@v2
+      with:
+        git_user_signingkey: true
+        git_commit_gpgsign: true
+      env:
+        GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+        PASSPHRASE: ${{ secrets.PASSPHRASE }}
+    - name: GPG user IDs
+      run: |
+        echo "fingerprint: ${{ steps.import_gpg.outputs.fingerprint }}"
+        echo "keyid:       ${{ steps.import_gpg.outputs.keyid }}"
+        echo "name:        ${{ steps.import_gpg.outputs.name }}"
+        echo "email:       ${{ steps.import_gpg.outputs.email }}"
+    - name: Update sub git modules
+      run: git submodule update --remote
+
+    - name: Commit update
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "chore: update sub modules"
+        commit_options: "-S"
+        commit_user_email: "i@a632079.me"
+        commit_user_name: "a632079"
+        commit_author: "a632079 <i@a632079.me>"
