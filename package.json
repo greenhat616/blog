@@ -23,7 +23,7 @@
     "hexo-renderer-stylus": "2.0.0",
     "hexo-server": "2.0.0",
     "hexo-util": "2.3.0",
-    "html-to-text": "5.1.1",
+    "html-to-text": "6.0.0",
     "live2d-widget-model-miku": "1.0.5",
     "lodash": "4.17.20",
     "moment": "2.27.0"
