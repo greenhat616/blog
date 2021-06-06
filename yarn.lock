@@ -2576,10 +2576,10 @@ hexo-generator-index@2.0.0:
     hexo-pagination "1.0.0"
     timsort "^0.3.0"
 
-hexo-generator-search@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/hexo-generator-search/-/hexo-generator-search-2.4.0.tgz#f5abbbbbe35299f52c2554bb89845d0a4fab6c9b"
-  integrity sha512-470q6Cpu6xHIPMXN+rQjCQkn/ii4e8XJRBXCmKs+B1jGQNrT7K3geqfyd5pqGiGi6bh5yY+mNqwGw5r2sZZtzA==
+hexo-generator-search@2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/hexo-generator-search/-/hexo-generator-search-2.4.3.tgz#c4f35c8b8429355612dd1cdf5a18de3568166f99"
+  integrity sha512-Z5hfZq2g3np/Tgdp2q9HobfIvU6Pdz89tnTurc1IIq/vW0MHgDynk0Aiv6kvMtKWthnZ5l0iEMT3YLN35NdYwQ==
   dependencies:
     nunjucks "^3.0.1"
     utils-merge "^1.0.0"
